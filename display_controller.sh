@@ -82,7 +82,7 @@ set_display() {
 
 
 use_config() {
-  text="$(toml2json ${config_file})"
+  text="$(toml2json ${Config_file})"
   selected_config=$(config_menu "$text" | "${Filter[@]}")
   setting_text=$(echo $text | jq ".$selected_config.settings")
 
